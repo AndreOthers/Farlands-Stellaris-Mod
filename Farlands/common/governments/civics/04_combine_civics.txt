@@ -36,7 +36,7 @@ civic_combine_terminator = {
             blocks_disruptive_gameplay = yes
         }
     }
-    description = { "civic_combine_terminator_desc" }
+    description =  "civic_combine_terminator_desc" 
     modifier = {
         country_starbase_influence_cost_mult = -0.3
         ship_weapon_damage = 0.30
