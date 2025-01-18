@@ -1,4 +1,5 @@
 civic_combine_terminator = {
+    description = civic_combine_terminator_desc
     playable = { has_synthetic_dawn = yes }
     potential = { has_synthetic_dawn = yes }
     possible = {
@@ -25,6 +26,7 @@ civic_combine_terminator = {
         }
     }
     modification = no
+    icon = "gfx/interface/icons/governments/civics/i_combine_terminator.dds" #Bei jedem gfx wird der anfang als (klein i_) gemacht für erkennung ist jetzt so intern nicht ingame# 
     random_weight = {
         base = @civic_default_random_weight
         modifier = {
@@ -36,12 +38,48 @@ civic_combine_terminator = {
             blocks_disruptive_gameplay = yes
         }
     }
-    description =  "civic_combine_terminator_desc" 
+    hide_modifiers = no 
     modifier = {
         country_starbase_influence_cost_mult = -0.3
         ship_weapon_damage = 0.30
         starbase_shipyard_build_cost_mult = -0.10
         country_naval_cap_mult = 0.40
         planet_resettlement_unemployed_mult = 0.50
+    }
+}
+
+civic_civil_protection = {
+    description = civic_civil_protection_desc
+    playable = { has_synthetic_dawn = yes }
+    potential = { has_synthetic_dawn = yes }
+    possible = {
+        civics = {
+            NOT = {
+                value = civic_combine_terminator
+            }
+        }
+        origin = {
+            NOT = {
+                value = origin_common_ground
+                value = origin_hegemon
+            }
+        }
+    }
+    modification = yes
+    icon =#"gfx/interface/icons/governments/civics/i_###"
+    random_weight = {
+        base = @civic_default_random_weight
+        modifier = {
+            factor = 0
+            has_synthetic_dawn = no
+        }
+        modifier = {
+            factor = 0
+            blocks_disruptive_gameplay = yes
+        }
+    }
+    hide_modifiers = no 
+    modifier = {
+        planet_resettlement_unemployed_mult = 0.7
     }
 }
