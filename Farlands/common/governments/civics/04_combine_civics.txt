@@ -66,7 +66,7 @@ civic_civil_protection = {
         }
     }
     modification = yes
-    icon =#"gfx/interface/icons/governments/civics/i_###"
+    icon = "gfx/interface/icons/governments/civics/i_civil_protection"
     random_weight = {
         base = @civic_default_random_weight
         modifier = {
